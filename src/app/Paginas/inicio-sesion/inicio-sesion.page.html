@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="ion-text-center">
+    <ion-title>Inicio Sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid fixed>
+    <div class="ion-text-center"><img width=170px>
+    </div>
+    <form [formGroup]="formularioLog" (ngSubmit)="iniciarSesion()">
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Username</ion-label>
+            <ion-input required formControlName="username" type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input required formControlName="password" type="password"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" shape="round" color="primary" type="submit" >
+            <ion-icon name="log-in-outline" slot="end"></ion-icon>
+            Iniciar sesión
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" shape="round" color="danger" >
+            <ion-icon name="help-circle-outline" slot="end"></ion-icon>
+            ¿Olvidaste tu contraseña ?
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+  </ion-grid>
+</ion-content>
